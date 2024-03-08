@@ -1,0 +1,21 @@
+{
+    "name": "aaron/flashing-heiloo-website",
+    "description": "Flashing heiloo website",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aaron Wesselius"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": ".",
+            "App\\Controllers\\": "./controllers",
+            "App\\Models\\": "./models",
+            "App\\Services\\": "./services",
+            "App\\Repositories\\": "./repositories",
+            "App\\Views\\": "./views"            
+        }
+    }
+}
