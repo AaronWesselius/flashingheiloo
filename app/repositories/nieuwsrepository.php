@@ -3,7 +3,7 @@ namespace App\Repositories;
 
 use PDO;
 
-class ArticleRepository extends Repository {
+class NieuwsRepository extends Repository {
 
     function getAll() {
         $stmt = $this->connection->prepare("SELECT id, kop, 'date', 'text' FROM clubniews;");
