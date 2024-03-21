@@ -6,42 +6,21 @@
     <title>Admin</title>
 </head>
 <body>
+
 <?php
 include __DIR__ . '/../header.php';
 ?>
-    <h1>Admin</h1>
-    <div class="container text-center">
-    <div class="row">
-        <div class="col">
-            <H2>Spelers</H2>
-            <?php foreach ($spelerList as $speler): ?>
-                <div class="card border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h2 class="card-title"><?= $speler->voornaam ?></h2>
-                        <p class="card-text"><?= $speler->achternaam ?></p>
-                        <button class="btn btn-warning">Update</a>
-                        <button class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>                     
-        </div>
 
-        <div class="col">
-            <H2>Nieuws</H2>
-            <?php foreach ($nieuwsList as $nieuws): ?>
-                <div class="card border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h2 class="card-title"><?= $nieuws->kop ?></h2>
-                        <p class="card-text"><?= $nieuws->text ?></p>
-                        <button class="btn btn-warning">Update</a>
-                        <button class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+<div class="container vh-100 d-flex justify-content-center align-items-center mt-1">
+    <form class="row g-3" method="POST">       
+        <div class="mb-4">
+            <label class="form-label">Wachtwoord</label>
+            <input type="password" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="wachtwoord">
         </div>
-    
-  </div>
+        <button type="submit" class="btn btn-primary">Submit</button>           
+    </form>
 </div>
+
 
 </body>
 </html>

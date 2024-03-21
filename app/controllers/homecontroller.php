@@ -1,20 +1,17 @@
 <?php
-namespace App\Controllers;
-
+session_start();
 class HomeController
 {
-    //private $articleService;
     private $niewsService;
 
     function __construct()
     {
-        //$this->articleService = new \App\Services\ArticleService();
         $this->niewsService = new \App\Services\NieuwsService();
+        $_SESSION['logedin'] = false;
     }
 
     public function index()
     {
-        //$model = $this->articleService->getAll();
         $nieuwsList = $this->niewsService->getAll();
         require __DIR__ . '/../views/home/index.php';
     }

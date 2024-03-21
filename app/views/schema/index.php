@@ -33,10 +33,10 @@ include __DIR__ . '/../header.php';
                         <td><?= $wedstrijd->team1 ?></td>
                         <td><?= $wedstrijd->team2 ?></td>
                         <td><?= $wedstrijd->datum ?></td>
-                        <td><?= $wedstrijd->schijdsrechter1 ?></td>
-                        <td><?= $wedstrijd->schijdsrechter2 ?></td>
-                        <td><?= $wedstrijd->tafel1 ?></td>
-                        <td><?= $wedstrijd->tafel2 ?></td>
+                        <td>[<?= $wedstrijd->schijdsrechter1->team ?>] <?= $wedstrijd->schijdsrechter1->voornaam ?> <?= $wedstrijd->schijdsrechter1->achternaam?></td>
+                        <td>[<?= $wedstrijd->schijdsrechter2->team ?>] <?= $wedstrijd->schijdsrechter2->voornaam ?> <?= $wedstrijd->schijdsrechter2->achternaam?></td>
+                        <td>[<?= $wedstrijd->tafel1->team ?>] <?= $wedstrijd->tafel1->voornaam ?> <?= $wedstrijd->tafel1->achternaam?></td>
+                        <td>[<?= $wedstrijd->tafel2->team ?>] <?= $wedstrijd->tafel2->voornaam ?> <?= $wedstrijd->tafel2->achternaam?></td>
                         <form method="POST">
                         <input name="id" value="<?= $wedstrijd->id ?>" style="display: none;" />
                         <td><button type="submit" class="btn btn-danger">Delete</button></td>

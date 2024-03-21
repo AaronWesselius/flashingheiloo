@@ -1,6 +1,5 @@
 <?php
-namespace App\Controllers;
-
+session_start();
 class SchemaController
 {
     private $spelerService;
@@ -10,6 +9,7 @@ class SchemaController
     {
         $this->spelerService = new \App\Services\SpelerService();
         $this->wedstrijdService = new \App\Services\WedstrijdService();
+        $_SESSION['logedin'] = false;
     }
 
     public function index()
@@ -35,7 +35,6 @@ class SchemaController
             require __DIR__ . '/../views/schema/maken.php';
         }   
         if($_SERVER['REQUEST_METHOD'] == "POST") {
-            
             $team1 = $_POST['thuisTeam'];
             $team2 = $_POST['uitTeam'];        
             $schijdsrechter1 = $_POST['schijdsrechter1'];
