@@ -1,6 +1,6 @@
 <?php
 namespace App\Repositories;
-
+use App\Models\Speler;
 use PDO;
 
 class SpelerRepository extends Repository {
@@ -48,6 +48,15 @@ class SpelerRepository extends Repository {
         $stmt->setFetchMode(PDO::FETCH_CLASS, 'App\\Models\\Speler');
         $speler = $stmt->fetch();
     
+        if ($speler === false) {
+            $speler = new Speler();
+            $speler->id = $id;
+            $speler->voornaam = ' ';
+            $speler->achternaam = ' ';
+            $speler->geboortedatum = '0000-00-00';
+            $speler->team = ' leeg ';
+        }
+
         return $speler;
     }
     

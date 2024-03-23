@@ -1,3 +1,5 @@
+## wachtwoord voor log in in admin = flashing
+
 # Basic PHP MVC demo
 This repository demonstrates how the MVC design pattern can be implemented using PHP.
 
@@ -29,6 +31,3 @@ Or run:
 docker-compose down
 ```
 
-## password
-
-flashing

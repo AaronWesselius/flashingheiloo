@@ -40,6 +40,15 @@ CREATE TABLE wedstrijd (
     tafel2 INT,
     datum DATETIME
 );
+INSERT INTO wedstrijd (team1, team2, schijdsrechter1, schijdsrechter2, tafel1, tafel2, datum)
+VALUES
+('Flashing Heiloo u14', 'MBCA u14', 3, 4, 1, 2, '2024-04-01 10:00:00'),
+('Flashing Heiloo u18', 'MBCA u18', 2, 1, 3, 4, '2024-04-02 14:00:00'),
+('Flashing Heiloo u16', 'MBCA u16', 7, 8, 5, 6, '2024-04-03 18:00:00'),
+('Flashing Heiloo u14', 'HBC u14', 5, 6, 1, 2, '2024-04-04 22:00:00'),
+('Flashing Heiloo u18', 'HBC u18', 1, 2, 3, 4, '2024-04-05 02:00:00');
+
+
 
 CREATE TABLE speler (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,32 +64,37 @@ VALUES
     ('Jane', 'Smith', '1991-02-02', 'u14'),
     ('Michael', 'Johnson', '1992-03-03', 'u16'),
     ('Emily', 'Williams', '1993-04-04', 'u18'),
-    ('Robert', 'Brown', '1994-05-05', 'u18');
+    ('Robert', 'Brown', '1994-05-05', 'u18'),
+    ('Piet', 'Groen', '1990-01-01', 'u14'),
+    ('Kees', 'Vissers', '1991-02-02', 'u14'),
+    ('Henk', 'Jansen', '1992-03-03', 'u16'),
+    ('Joost', 'Tolsma', '1993-04-04', 'u18'),
+    ('Peter', 'Gakpo', '1994-05-05', 'u18');
 
 
 CREATE TABLE programma (
     id INT NOT NULL AUTO_INCREMENT,
     beginTijd TIME,
     eindTijd TIME,
-    dag INT,
+    dag VARCHAR(10),
     team VARCHAR(10),
     locatie VARCHAR(255),
     PRIMARY KEY (id)
 );
 INSERT INTO programma (beginTijd, eindTijd, dag, team, locatie)
-VALUES ('08:00:00', '10:00:00', 1, 'U14', 'burenweg');
+VALUES ('08:00:00', '10:00:00', 'Maandag', 'U14', 'burenweg');
 
 INSERT INTO programma (beginTijd, eindTijd, dag, team, locatie)
-VALUES ('10:00:00', '12:00:00', 2, 'U16', 'burenweg');
+VALUES ('10:00:00', '12:00:00', 'Maandag', 'U16', 'burenweg');
 
 INSERT INTO programma (beginTijd, eindTijd, dag, team, locatie)
-VALUES ('12:00:00', '14:00:00', 3, 'U14', 'burenweg');
+VALUES ('12:00:00', '14:00:00', 'Woensdag', 'U14', 'burenweg');
 
 INSERT INTO programma (beginTijd, eindTijd, dag, team, locatie)
-VALUES ('14:00:00', '16:00:00', 4, 'U16', 'burenweg');
+VALUES ('14:00:00', '16:00:00', 'Vrijdag', 'U16', 'burenweg');
 
 INSERT INTO programma (beginTijd, eindTijd, dag, team, locatie)
-VALUES ('16:00:00', '18:00:00', 5, 'U18', 'burenweg');
+VALUES ('16:00:00', '18:00:00', 'Vrijdag', 'U18', 'burenweg');
 
 
 

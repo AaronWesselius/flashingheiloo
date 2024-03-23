@@ -9,7 +9,6 @@ class SchemaController
     {
         $this->spelerService = new \App\Services\SpelerService();
         $this->wedstrijdService = new \App\Services\WedstrijdService();
-        $_SESSION['logedin'] = false;
     }
 
     public function index()

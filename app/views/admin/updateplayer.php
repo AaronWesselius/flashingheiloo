@@ -10,6 +10,10 @@
 <?php
 include __DIR__ . '/../header.php';
 ?>
+<div class="d-flex justify-content-between align-items-center">
+        <h1>Speler Updaten</h1>
+        <a href="/admin/admin" class="btn btn-primary" role="button">Back</a>
+</div>
 <form class="row g-3" method="POST"> 
     <div class="form-group">
         <label for="voornaam">Voornaam</label>

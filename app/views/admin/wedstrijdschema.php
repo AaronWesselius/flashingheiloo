@@ -11,7 +11,7 @@
     
     <div class="d-flex justify-content-between align-items-center">
         <h1>Wedstrijd maken</h1>
-        <a type="button" class="btn btn-primary btn-lg" href="/schema/">terug</a>
+        <a type="button" class="btn btn-primary btn-lg" href="/admin/admin">terug</a>
     </div>
 
     <div class="container mx-auto p-3">

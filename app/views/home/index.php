@@ -36,7 +36,7 @@ include __DIR__ . '/../header.php';
 </div>
 <div class="col-1"></div>
 <div class="col-5">
-    <h2>Programma</h2>
+    <h2>Trainingstijden</h2>
     <div id="data-container">
         <table class="table" id="programma-table">
             <thead>
@@ -50,7 +50,6 @@ include __DIR__ . '/../header.php';
         fetch('http://localhost/api/programma')
         .then(result => result.json())
         .then((data) => {
-            console.log('Output: ', data);
             const headerRow = document.getElementById('header-row');
             const dataRows = document.getElementById('data-rows');
 
@@ -60,7 +59,6 @@ include __DIR__ . '/../header.php';
                 th.textContent = header;
                 headerRow.appendChild(th);
             });
-
             data.forEach(item => {
                 const row = document.createElement('tr');
                 headers.forEach(header => {

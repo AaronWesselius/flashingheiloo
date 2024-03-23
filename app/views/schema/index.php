@@ -12,7 +12,7 @@ include __DIR__ . '/../header.php';
 
 </head>
 <body>
-    <h1>Schema</h1>
+    <h1>Wedstrijd schema</h1>
     <div class="container">
         <table class="table">
             <thead>
@@ -24,7 +24,6 @@ include __DIR__ . '/../header.php';
                     <th scope="col">Scheidsrechter 2</th>
                     <th scope="col">Tafel 1</th>
                     <th scope="col">Tafel 2</th>
-                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,13 +38,11 @@ include __DIR__ . '/../header.php';
                         <td>[<?= $wedstrijd->tafel2->team ?>] <?= $wedstrijd->tafel2->voornaam ?> <?= $wedstrijd->tafel2->achternaam?></td>
                         <form method="POST">
                         <input name="id" value="<?= $wedstrijd->id ?>" style="display: none;" />
-                        <td><button type="submit" class="btn btn-danger">Delete</button></td>
                         </form> 
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-    <a type="button" class="btn btn-primary" href="/schema/maken">Wedstrijd maken</a>
     </div>
     
 </body>
