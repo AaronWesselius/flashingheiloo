@@ -1,13 +1,4 @@
-## wachtwoord voor log in in admin = flashing
-
-# Basic PHP MVC demo
-This repository demonstrates how the MVC design pattern can be implemented using PHP.
-
-It contains a docker configuration with:
-* NGINX webserver
-* PHP FastCGI Process Manager with PDO MySQL support
-* MariaDB (GPL MySQL fork)
-* PHPMyAdmin
+## Wachtwoord voor log in in admin = flashing
 
 ## Installation
 
@@ -15,7 +6,6 @@ It contains a docker configuration with:
 1. Clone the project
 
 ## Usage
-
 
 In a terminal, run:
 ```bash
